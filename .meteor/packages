@@ -26,3 +26,5 @@ meetup-config-ui
 accounts-facebook
 facebook-config-ui
 fourseven:scss
+iron:router
+accounts-password
