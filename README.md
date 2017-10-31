@@ -1,0 +1,2 @@
+# slappfisk
+Slappfisk - Meteor demo
