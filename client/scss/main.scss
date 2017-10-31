@@ -1,0 +1,157 @@
+@import "variables";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+body {
+    background-color: rgb(47, 64, 80);
+}
+
+#wrapper {}
+
+#login-buttons {
+
+    .login-close-text {
+        color: rgb(103, 106, 108);
+
+    }
+
+}
+
+nav {
+    @include make-xs-column(3);
+
+    color: #a7b1c2;
+    padding: 0;
+
+    .logo {
+        position: relative;
+        text-align: center;
+        margin-left: 30%;
+        margin-top: 20px;
+        max-width: 40%;
+
+        img {
+            margin: 0 auto;
+            width: 100%;
+        }
+
+    }
+
+    .profile {
+        text-align: center;
+        padding-top: 2em;
+        height: 5em;
+
+        a {
+            color: #a7b1c2;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        @include make-row;
+        position: relative;
+        display: block;
+        margin: 0;
+
+         &:hover, &.active {
+            a {
+                background-color: #293846;
+                text-decoration: none;
+                color: white;
+            }
+
+            .remove-room {
+                color: $red;
+            }
+        }
+
+        .open-room {
+            @include make-xs-column(8);
+            padding: 10px 25px;
+            color: #a7b1c2;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        .remove-room {
+            @include make-xs-column(4);
+            padding: 10px 25px;
+            text-align: center;
+            color: $red;
+        }
+
+    }
+
+    .add-room {
+        margin: 25px;
+
+        input {
+            color: rgb(103, 106, 108);
+        }
+
+    }
+
+}
+
+.content {
+    @include make-xs-column(9);
+    background-color: rgb(243, 243, 244);
+    min-height: 500px;
+
+    .message-content {
+        color: rgb(103, 106, 108);
+    }
+
+}
+
+.messages {
+    background: #eee;
+    padding: 15px;
+    // height: 400px;
+    overflow-y: auto;
+
+    .message {
+        border: 1px solid #e7eaec;
+        background-color: #fff;
+        padding: 10px 20px;
+        position: relative;
+        border-radius: 4px;
+        margin: 10px 20px;
+        text-align: left;
+        display: block;
+
+        .author {
+            color: #337ab7;
+        }
+
+        .date {
+            font-size: 10px;
+            color: #888888;
+            float: right;
+        }
+
+        .message-content {
+            display: block;
+        }
+
+        &.right {
+            text-align: right;
+
+            .date {
+                float:left;
+            }
+        }
+
+    }
+
+}

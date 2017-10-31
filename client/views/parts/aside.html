@@ -1,0 +1,35 @@
+<template name="slapp_aside">
+    <ul>
+        {{#each rooms}}
+            {{ > slapp_room_item }}
+        {{/each}}
+    </ul>
+
+    {{#if isLoggedIn}}
+        <form class="add-room">
+            <label>Add room:</label>
+            <div class="input-group">
+                <input type="text" palceholder="Room name" name="name" class="form-control">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary" >Add</button>
+                </span>
+            </div>
+        </form>
+    {{/if}}
+</template>
+
+<template name="slapp_room_item">
+    <li class="{{#if isActive}}active{{/if}}">
+        <a class="open-room">
+            {{#if isActive}}
+                <i class="fa fa-commenting"></i>
+            {{else}}
+                <i class="fa fa-commenting-o"></i>
+            {{/if}}
+            {{ title }}
+        </a>
+        <a class="remove-room">
+            <i class="fa fa-trash delete-room"></i>
+        </a>
+    </li>
+</template>
