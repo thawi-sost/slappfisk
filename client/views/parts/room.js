@@ -42,7 +42,7 @@ Template.slapp_compose_message.events({
                 content: event.target.messageContent.value,
                 author: Meteor.user()._id,
             });
-            template.find("form").reset().focus();
+            template.find("form").reset();
         }
     }
 });
