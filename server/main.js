@@ -1,5 +1,4 @@
 import { Meteor } from 'meteor/meteor';
-
-Meteor.startup(() => {
-  // code to run on server at startup
-});
+import { Rooms } from '../imports/api/rooms.js';
+import { Messages } from '../imports/api/messages.js';
+import { Users } from '../imports/api/users.js';
